@@ -31,7 +31,110 @@
     
     </head>
 
-<body>
+<body class="vh-100 d-flex align-items-center">
+
+    <div id="root" class="mx-auto">
+
+        <div id="overlay" class="container-fluid bg-white shadow-lg">
+
+            <div class="row h-100">
+
+                <!-- SIDEBAR -->
+                <div id="col-side" class="col px-0">
+
+                    <!-- SIDEBAR HEADER -->
+                    <header class="d-flex justify-content-between shadow-sm">
+
+                        <div class="user-side-image d-flex align-items-center">
+                            <img src="img/avatar_io.jpg" alt="user profile image" class="img-fluid">
+                            <h6 id="username" class="ms-1">Nome Utente</h6>
+                        </div>
+
+                        <div class="user-side-actions d-flex align-items-center pt-1">
+
+                            <a href="#"><i class="bi bi-pencil-square fa-lg"></i></a>
+
+                            <a href="#"><i class="bi bi-chat-square mx-2 fa-lg"></i></a>
+
+                            <a href="#"><i class="bi bi-three-dots fa-lg"></i></a>
+
+                        </div>
+
+                    </header>
+
+                    <!-- SIDEBAR HERO -->
+                    <div class="sidebar-hero d-flex align-items-center">
+
+                        <i id="hero-bell" class="bi bi-bell-slash-fill"></i>
+
+                        <div class="ms-2"> 
+                            <h6>Ricevi notifiche di nuovi messaggi</h6>
+    
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+
+                    </div>
+
+                    <!-- SIDEBAR SEARCH INPUT -->
+                    <div class="m-2">
+                        <div class="input-group">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-success border ms-n3" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            <input class="form-control border-start-0 border" type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- MAIN -->
+                <div id="col-main" class="col px-0">
+
+                    <!-- MAIN HEADER --> 
+                    <header class="d-flex justify-content-between shadow-sm">
+
+                        <div class="user-side-image d-flex align-items-center">
+                            <img src="img/avatar_1.jpg" alt="user profile image" class="img-fluid">
+                            <h6 id="contact-name" class="ms-1">Amico</h6>
+                        </div>
+
+                        <div class="user-side-actions d-flex align-items-center pt-1">
+
+                            <a href="#"><i class="bi bi-camera-video fa-lg"></i></a>
+
+                            <a href="#"><i class="bi bi-telephone fa-lg mx-2"></i></a>
+
+                            <div class="vertical-line bg-dark"></div>
+
+                            <a href="#"><i class="bi bi-search fa-lg ms-2"></i></a>
+
+                        </div>
+
+                    </header>
+
+                    <main>
+
+                    </main>
+
+                    <div class="main-text-area d-flex align-items-center mx-2">
+                        <i class="bi bi-emoji-smile fa-lg"></i>
+                        <div class="input-group mx-2">
+                            <input class="form-control border-start-0 border" type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <i class="bi bi-mic fa-lg"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>

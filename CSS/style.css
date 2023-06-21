@@ -5,3 +5,128 @@
     box-sizing: border-box;
 }
 
+/***CUSTOM PROPERTIES***/
+:root {
+    /* Palette */
+    --bg-overlay: #EAEAEA;
+    --bg-hero: #8EDAFC;
+    --btn-color: #7c7c7c;
+    --btn-color-hover: #009688;
+    /* Commons */
+    --white: #fff;
+    --black: #000;
+}
+
+
+
+body {
+    background: linear-gradient(#009688 0 12%, #DADBD3 12% 100%);
+}
+
+#overlay {
+    height: 90vh;
+    width: 75vw;
+}
+
+[class^="col"] {
+    height: 100%;
+}
+
+#col-side {
+    flex-basis: 35%;
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+#col-main {
+    flex-basis: 65%;
+}
+
+header{
+    height: 75px;
+    background-color: var(--bg-overlay);
+    padding: 10px;
+}
+
+.user-side-image img {
+    border-radius: 50%;
+    max-height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+#username {
+    padding-top: 6.5%;
+    cursor: default;
+}
+
+#contact-name {
+    padding-top: 10%;
+    cursor: pointer;
+}
+
+#contact-name:hover {
+    color: #009688;
+}
+
+a {
+    color: var(--btn-color);
+}
+
+[class^="bi"] {
+    padding: 10px;
+}
+
+[class^="bi"]:hover {
+    background-color: var(--btn-color-hover);
+    color: var(--white);
+    border-radius: 7px;
+}
+
+.vertical-line {
+    height: 50%;
+    border: 1px solid var(--btn-color);
+}
+
+.sidebar-hero {
+    height: 90px;
+    background-color: var(--bg-hero);
+    position: relative;
+}
+
+.sidebar-hero a {
+    font-size: 14px;
+}
+
+.bi-bell-slash-fill {
+    font-size: 25px;
+    margin-left: 1.5rem;
+    border-radius: 50%;
+    padding-inline: 15px;
+    background-color: #fff;
+    color: #009688;
+}
+
+.bi-bell-slash-fill:hover {
+    background-color: transparent;
+    border-radius: 50%;
+    padding-inline: 15px;
+    background-color: #fff;
+    color: #009688;
+}
+
+.input-group-append button:hover {
+    background-color: #009688;
+    color: var(--white);
+}
+
+main {
+    height: calc(100% - 145px);
+    background-image: url(../img/mine.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-text-area {
+    height: 70px;
+    background-color: var(--white);
+}
