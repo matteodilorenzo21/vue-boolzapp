@@ -224,19 +224,66 @@ const app = createApp({
                         status: 'received'
                       }
                     ],
-                }
+                },
+                newMessage: '',
               }
     },
     methods: {
         openChat(contact) {
-            this.selectedContact.avatar = contact.avatar;
-            this.selectedContact.name = contact.name;
-            this.selectedContact.messages = contact.messages;
+          this.selectedContact.avatar = contact.avatar;
+          this.selectedContact.name = contact.name;
+          this.selectedContact.messages = contact.messages;
         },
-        newMessage() {
-            this.selectedContact.messages.push()
+      
+        sendMessage() {
+          const currentDate = this.newDate();
+          
+          const messageId = this.generateId();
+      
+          const newMessage = {
+            id: messageId,
+            date: currentDate,
+            message: this.newMessage,
+            status: 'sent'
+          };
+      
+          this.selectedContact.messages.push(newMessage);
+      
+          setTimeout(() => {
+            const replyMessageId = this.generateId(); 
+
+            const replyMessage = {
+              id: replyMessageId,
+              date: this.newDate(),
+              message: 'ok',
+              status: 'received'
+            };
+            this.selectedContact.messages.push(replyMessage);
+          }, 1000);
+      
+          this.newMessage = '';
+        },
+      
+        newDate() {
+          const now = new Date();
+          const year = now.getFullYear();
+          const month = now.getMonth() + 1;
+          const day = now.getDate();
+          const hours = now.getHours();
+          const minutes = now.getMinutes();
+          const seconds = now.getSeconds();
+          const currentDate = `${day}/${month}/${year}`;
+          const currentTime = `${hours}:${minutes}`;
+          const date = `${currentDate} ${currentTime}`;
+          return date;
+        },
+      
+        generateId() {
+          
+          return new Date().getTime();
         }
-    }
+      }
+      
 })
 
 app.mount('#root');

@@ -133,7 +133,7 @@
 
                         <ul class="px-3 flex-grow-1">
                             
-                            <li v-for="message in selectedContact.messages" class="message-container" :class="message.status === 'sent' ? ' sent' : ' received'">
+                            <li v-for="message in selectedContact.messages" class="message-container my-2" :class="message.status === 'sent' ? ' sent' : ' received'">
                                 <div class="message p-2 rounded-3">
                                     <p>{{message.message}}</p>
                                     <time datetime="2023-08-03T09:53">{{message.date}}</time>
@@ -148,7 +148,7 @@
                         <i class="bi bi-emoji-smile fa-lg"></i>
                         <i class="bi bi-paperclip fa-lg"></i>
                         <div class="input-group mx-2">
-                            <input class="form-control border-start-0 border" type="text" placeholder="Scrivi un messaggio">
+                            <input v-model="newMessage" @keyup.enter="sendMessage(newMessage)" class="form-control border-start-0 border" type="text" placeholder="Scrivi un messaggio">
                         </div>
                         <i class="bi bi-mic fa-lg"></i>
                     </div>
