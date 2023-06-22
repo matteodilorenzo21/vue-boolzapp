@@ -87,12 +87,13 @@
                         </div>
                     </div>
 
+                    <!-- CONTACTS LIST -->
                     <main id="contacts-list" class="w-100 p-1">
 
                         <ul class="contacts list-unstyled w-100">
-                            <li class="my-1 p-1 d-flex align-items-center">
-                                <img src="img/avatar_1.jpg" alt="">
-                                <p class="mt-3 ms-2">Fabio</p>
+                            <li v-for="(contact, i) in contacts" class="my-1 p-1 d-flex align-items-center">
+                                <img :src=`img/avatar${contact.avatar}.jpg` :alt="contact.name">
+                                <p class="mt-3 ms-2">{{ contact.name }}</p>
                             </li>
                         </ul>
 
