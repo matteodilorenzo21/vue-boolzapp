@@ -123,6 +123,23 @@ a {
     color: var(--white);
 }
 
+#contacts-list {
+    display: flex;
+    height: calc(100% - 220px);
+    padding: 10px;
+}
+
+#contacts-list ul {
+    overflow: auto;
+}
+
+li img {
+    border-radius: 50%;
+    max-height: 50px;
+    display: block;
+    cursor: pointer;
+}
+
 /* MAIN */
 #chat {
     height: calc(100% - 145px);
