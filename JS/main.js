@@ -226,8 +226,16 @@ const app = createApp({
                     ],
                 },
                 newMessage: '',
+                searchContact: '',
               }
     },
+    computed: {
+        filteredContacts() {
+          return this.contacts.filter(contact => {
+            return contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
+          });
+        },
+      },
     methods: {
         openChat(contact) {
           this.selectedContact.avatar = contact.avatar;

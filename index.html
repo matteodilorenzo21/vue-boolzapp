@@ -78,29 +78,25 @@
                     <!-- SIDEBAR SEARCH INPUT -->
                     <div class="m-2">
                         <div class="input-group">
-                            <span class="input-group-append">
-                                <button class="btn btn-outline-success border ms-n3" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            <input class="form-control border-start-0 border" type="text" placeholder="Cerca o inizia una nuova chat">
+                          <span class="input-group-append">
+                            <button class="btn btn-outline-success border ms-n3" type="button">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </span>
+                          <input v-model="searchContact" class="form-control border-start-0 border" type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
-                    </div>
+                      </div>
 
-                    <!-- CONTACTS LIST -->
-                    <main id="contacts-list" class="w-100 p-1">
-
+                      <!-- CONTACTS LIST -->
+                      <main id="contacts-list" class="w-100 p-1">
                         <ul class="contacts list-unstyled w-100">
-                            <li @click="openChat(contact)" v-for="(contact, i) in contacts" class="my-1 p-1 d-flex align-items-center">
-                                <img :src=`img/avatar${contact.avatar}.jpg` :alt="contact.name">
-                                <p class="mt-3 ms-2">{{ contact.name }}</p>
-                            </li>
+                          <li v-for="(contact, i) in filteredContacts" :key="contact.id" @click="openChat(contact)" class="my-1 p-1 d-flex align-items-center rounded">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+                            <p class="mt-3 ms-2">{{ contact.name }}</p>
+                          </li>
                         </ul>
-
-                    </main>
-
-                </div>
-
+                      </main>
+                    </div>
 
                 <!-- MAIN -->
                 <div id="col-main" class="col px-0">
