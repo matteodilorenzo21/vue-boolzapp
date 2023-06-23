@@ -1,0 +1,65 @@
+[33mcommit c832003550704ca104cf3ad3ec8dc683d5402552[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Fri Jun 23 09:16:09 2023 +0200
+
+    added dark-mode option
+
+[33mcommit 84a31f5ffd6927b35676f2ca8cb56971b33322af[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Thu Jun 22 18:08:09 2023 +0200
+
+    added Sidebar search input feature
+
+[33mcommit 9607477ba059275e4171432825b1094aebc58600[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Thu Jun 22 16:27:17 2023 +0200
+
+    added send messages and reply messages possibility
+
+[33mcommit 7c2c9f0f9da957f81b37917c4ca54f5a72147e96[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Thu Jun 22 14:51:33 2023 +0200
+
+    added Dynamic messages to chat
+
+[33mcommit 9ace7e8bb8a13daa48dc32560a12bb8b1df3e656[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Thu Jun 22 12:15:39 2023 +0200
+
+    added Sidebar contacts list v-for
+
+[33mcommit 6c2076c90a50dbac8713b27a91c5d9a016ffef12[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Thu Jun 22 11:50:00 2023 +0200
+
+    added Sidebar contacts list graphic
+
+[33mcommit ffad618ae958eb5ea80f7bcbf110c1718308a896[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Thu Jun 22 11:29:22 2023 +0200
+
+    added messages graphic
+
+[33mcommit 96e11df4ef5a790985d65075d360d7fad7e60d63[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Wed Jun 21 18:54:23 2023 +0200
+
+    added Page Layout
+
+[33mcommit a191ef2a165990969a2eaddc9473b4110e3cf766[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Wed Jun 21 14:36:14 2023 +0200
+
+    added CSS Properties Reset
+
+[33mcommit 49c2217398f3149544acf3c78f9101992921ded9[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Wed Jun 21 14:34:58 2023 +0200
+
+    added HTML boilerplate
+
+[33mcommit 8954ae432b7ff8a865b7ea481eb409e823d3a9e9[m
+Author: matteodilorenzo21 <matteodilorenzo21@gmail.com>
+Date:   Wed Jun 21 11:01:25 2023 +0200
+
+    first commit

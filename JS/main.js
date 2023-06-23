@@ -231,19 +231,22 @@ const app = createApp({
               }
     },
     computed: {
+        // FILTERING CONTACTS
         filteredContacts() {
           return this.contacts.filter(contact => {
             return contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
           });
         },
       },
+
     methods: {
+        // CHAT CHANGER
         openChat(contact) {
           this.selectedContact.avatar = contact.avatar;
           this.selectedContact.name = contact.name;
           this.selectedContact.messages = contact.messages;
         },
-      
+        // MESSAGE TO PUSH IN CHAT
         sendMessage() {
           const currentDate = this.newDate();
           
@@ -257,7 +260,8 @@ const app = createApp({
           };
       
           this.selectedContact.messages.push(newMessage);
-      
+          
+          // REPLY MESSAGE TO PUSH IN CHAT
           setTimeout(() => {
             const replyMessageId = this.generateId(); 
 
@@ -272,7 +276,23 @@ const app = createApp({
       
           this.newMessage = '';
         },
-      
+
+        // LAST MESSAGE & DATE FOR #CONTACTS-LIST
+        getLastMessage(contact) {
+            const messages = contact.messages;
+            if (messages.length > 0) {
+              return {
+                message: messages[messages.length - 1].message,
+                timestamp: messages[messages.length - 1].date
+              };
+            }
+            return {
+              message: '',
+              timestamp: ''
+            };
+        },
+        
+        // DATE METHOD
         newDate() {
             const now = new Date();
             const year = now.getFullYear();
@@ -286,12 +306,14 @@ const app = createApp({
             const date = `${currentDate} ${currentTime}`;
             return date;
         },
-      
+        
+        // MESSAGES ID GENERATOR
         generateId() {
           
           return new Date().getTime();
         },
 
+        // DARK MODE CHANGER
         toggleDarkMode() {
             this.darkMode = !this.darkMode;
           

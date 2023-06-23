@@ -159,6 +159,7 @@ a {
 
 #contacts-list li {
     cursor: pointer;
+    position: relative;
 }
 
 #contacts-list li:hover {
@@ -170,6 +171,20 @@ li img {
     max-height: 50px;
     display: block;
     cursor: pointer;
+}
+
+li address {
+    position: absolute;
+    left: 16.5%;
+    top: 60%;
+    font-size: 11px;
+}
+
+#contacts-list time {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 8px;
 }
 
 /* MAIN */

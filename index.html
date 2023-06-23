@@ -107,7 +107,8 @@
                           <li v-for="(contact, i) in filteredContacts" :key="contact.id" @click="openChat(contact)" class="my-1 p-1 d-flex align-items-center rounded">
                             <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                             <p class="mt-3 ms-2">{{ contact.name }}</p>
-                            <address></address>
+                            <address>{{ getLastMessage(contact).message }}</address>
+                            <time>{{ getLastMessage(contact).timestamp }}</time>
                           </li>
                         </ul>
                       </main>
