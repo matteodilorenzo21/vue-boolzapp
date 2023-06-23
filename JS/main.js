@@ -227,6 +227,7 @@ const app = createApp({
                 },
                 newMessage: '',
                 searchContact: '',
+                darkMode: false,
               }
     },
     computed: {
@@ -273,22 +274,70 @@ const app = createApp({
         },
       
         newDate() {
-          const now = new Date();
-          const year = now.getFullYear();
-          const month = now.getMonth() + 1;
-          const day = now.getDate();
-          const hours = now.getHours();
-          const minutes = now.getMinutes();
-          const seconds = now.getSeconds();
-          const currentDate = `${day}/${month}/${year}`;
-          const currentTime = `${hours}:${minutes}`;
-          const date = `${currentDate} ${currentTime}`;
-          return date;
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const currentDate = `${day}/${month}/${year}`;
+            const currentTime = `${hours}:${minutes}`;
+            const date = `${currentDate} ${currentTime}`;
+            return date;
         },
       
         generateId() {
           
           return new Date().getTime();
+        },
+
+        toggleDarkMode() {
+            this.darkMode = !this.darkMode;
+          
+            const body = document.querySelector('body');
+            const header = document.querySelectorAll('header');
+            const searchContacts = document.querySelector('#search-contacts');
+            const contactsList = document.querySelector('#contacts-list');
+            const listItems = document.querySelectorAll('#contacts-list li');
+            const mainTextArea = document.querySelector('#main-text-area');
+            const userName = document.querySelector('#username');
+            const contactName = document.querySelector('#contact-name');
+            const chatWallpaper = document.querySelector('#chat');
+          
+            if (this.darkMode) {
+              body.classList.add('bg-body-dark');
+              header.forEach((element) => {
+                element.classList.remove('bg-header');
+                element.classList.add('bg-mode-dark');
+              });
+              searchContacts.classList.add('bg-mode-dark');
+              contactsList.classList.add('bg-mode-dark');
+              listItems.forEach((item) => {
+                item.classList.add('text-hover-dark');
+              });
+              chatWallpaper.classList.remove('bg-chat')
+              chatWallpaper.classList.add('bg-chat-dark');
+              mainTextArea.classList.add('bg-mode-dark');
+              userName.classList.add('text-white');
+              contactName.classList.add('text-white')
+            } else {
+              body.classList.remove('bg-body-dark');
+              header.forEach((element) => {
+                element.classList.add('bg-header');
+                element.classList.remove('bg-mode-dark');
+              });
+              searchContacts.classList.remove('bg-mode-dark');
+              contactsList.classList.remove('bg-mode-dark');
+              listItems.forEach((item) => {
+                item.classList.remove('text-hover-dark');
+              });
+              chatWallpaper.classList.remove('bg-chat-dark')
+              chatWallpaper.classList.add('bg-chat');
+              mainTextArea.classList.remove('bg-mode-dark');
+              userName.classList.remove('text-white');
+              contactName.classList.remove('text-white');
+            }
         }
       }
       
