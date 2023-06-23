@@ -64,7 +64,7 @@
                                 <a href="#" data-bs-toggle="dropdown">
                                   <i class="bi bi-three-dots fa-lg"></i>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu shadow-lg">
                                   <li>
                                     <a class="dropdown-item" href="#" @click="toggleDarkMode" v-text="darkMode ? 'Light mode' : 'Dark mode'"></a>
                                   </li>
@@ -106,7 +106,7 @@
                         <ul class="contacts list-unstyled w-100">
                           <li v-for="(contact, i) in filteredContacts" :key="contact.id" @click="openChat(contact)" class="my-1 p-1 d-flex align-items-center rounded">
                             <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
-                            <p class="mt-3 ms-2">{{ contact.name }}</p>
+                            <p class="ms-2">{{ contact.name }}</p>
                             <address>{{ getLastMessage(contact).message }}</address>
                             <time>{{ getLastMessage(contact).timestamp }}</time>
                           </li>
@@ -122,7 +122,8 @@
 
                         <div class="user-side-image d-flex align-items-center">
                             <img :src=`img/avatar${selectedContact.avatar}.jpg` :alt="selectedContact.name" class="img-fluid">
-                            <h6 id="contact-name" class="ms-1">{{ selectedContact.name }}</h6>
+                            <h6 id="contact-name" class="ms-1 pb-3">{{ selectedContact.name }}</h6>
+                            <p id="last-access">Ultimo accesso: {{ getLastMessage(selectedContact).timestamp }}</p>
                         </div>
 
                         <div class="user-side-actions d-flex align-items-center pt-1">

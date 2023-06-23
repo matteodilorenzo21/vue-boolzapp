@@ -67,6 +67,7 @@ body {
 header{
     height: 75px;
     padding: 10px;
+    position: relative;
 }
 
 .bg-header {
@@ -188,6 +189,13 @@ li address {
 }
 
 /* MAIN */
+#last-access {
+    position: absolute;
+    top: 60%;
+    left: 9.3%;
+    font-size: 12px;
+}
+
 #chat {
     height: calc(100% - 145px);
     overflow: auto;
