@@ -326,6 +326,7 @@ const app = createApp({
             const userName = document.querySelector('#username');
             const contactName = document.querySelector('#contact-name');
             const chatWallpaper = document.querySelector('#chat');
+            const lastAccess = document.querySelector('#last-access');
           
             if (this.darkMode) {
               body.classList.add('bg-body-dark');
@@ -338,6 +339,7 @@ const app = createApp({
               listItems.forEach((item) => {
                 item.classList.add('text-hover-dark');
               });
+              lastAccess.classList.add('text-white');
               chatWallpaper.classList.remove('bg-chat')
               chatWallpaper.classList.add('bg-chat-dark');
               mainTextArea.classList.add('bg-mode-dark');
@@ -354,6 +356,7 @@ const app = createApp({
               listItems.forEach((item) => {
                 item.classList.remove('text-hover-dark');
               });
+              lastAccess.classList.remove('text-white');
               chatWallpaper.classList.remove('bg-chat-dark')
               chatWallpaper.classList.add('bg-chat');
               mainTextArea.classList.remove('bg-mode-dark');
