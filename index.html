@@ -159,12 +159,56 @@
 
                     <!-- CHAT MESSAGE INPUT -->
                     <div id="main-text-area" class="main-text-area d-flex align-items-center p-2 ">
-                        <a href="#">
+                        <a href="#" @click="toggleEmojiMenu">
                             <i class="bi bi-emoji-smile fa-lg pe-auto message-act"></i>
-                        </a>                            
-                        <a href="#">
+                          </a>
+                          <!-- ... -->
+                          <div v-if="showEmojiMenu" class="emoji-menu rounded shadow-lg">
+                            <a href="#" class="fs-4">&#128512</a>
+                            <a href="#" class="fs-4">&#128513</a>
+                            <a href="#" class="fs-4">&#128514</a>
+                            <a href="#" class="fs-4">&#128515</a>
+                            <a href="#" class="fs-4">&#128516</a>
+                            <a href="#" class="fs-4">&#128517</a>
+                            <a href="#" class="fs-4">&#128518</a>
+                            <a href="#" class="fs-4">&#128519</a>
+                            <a href="#" class="fs-4">&#128520</a>
+                            <a href="#" class="fs-4">&#128521</a>
+                            <a href="#" class="fs-4">&#128522</a>
+                            <a href="#" class="fs-4">&#128523</a>
+                            <a href="#" class="fs-4">&#128524</a>
+                            <a href="#" class="fs-4">&#128525</a>
+                            <a href="#" class="fs-4">&#128526</a>
+                            <a href="#" class="fs-4">&#128527</a>
+                            <a href="#" class="fs-4">&#128528</a>
+                            <a href="#" class="fs-4">&#128529</a>
+                            <a href="#" class="fs-4">&#128530</a>
+                            <a href="#" class="fs-4">&#128531</a>
+                            <a href="#" class="fs-4">&#128532</a>
+                            <a href="#" class="fs-4">&#128533</a>
+                            <a href="#" class="fs-4">&#128534</a>
+                            <a href="#" class="fs-4">&#128535</a>
+                            <a href="#" class="fs-4">&#128536</a>
+                            <a href="#" class="fs-4">&#128537</a>
+                            <a href="#" class="fs-4">&#128538</a>
+                            <a href="#" class="fs-4">&#128539</a>
+                            <a href="#" class="fs-4">&#128540</a>
+                            <a href="#" class="fs-4">&#128541</a>
+                            <a href="#" class="fs-4">&#128542</a>
+                            <a href="#" class="fs-4">&#128543</a>
+                            <a href="#" class="fs-4">&#128544</a>
+                            <a href="#" class="fs-4">&#128545</a>
+                            <a href="#" class="fs-4">&#128546</a>
+                            <a href="#" class="fs-4">&#128547</a>
+                            <a href="#" class="fs-4">&#128548</a>
+                            <a href="#" class="fs-4">&#128549</a>
+                            <a href="#" class="fs-4">&#128550</a>
+                            <a href="#" class="fs-4">&#128552</a>
+                          </div>                          
+                          <a href="#" @click="openFileInput">
                             <i class="bi bi-paperclip fa-lg pe-auto message-act"></i>
-                        </a>
+                          </a>
+                          <input type="file" id="fileInput" style="display: none" @change="handleFileSelection">
                         <div class="input-group mx-2">
                             <input v-model="newMessage" @keyup.enter="sendMessage(newMessage)" class="form-control border-start-0 border" type="text" placeholder="Scrivi un messaggio">
                         </div>

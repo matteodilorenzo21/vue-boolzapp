@@ -225,6 +225,23 @@ li address {
     border-radius: 7px;
 }
 
+.bi-emoji-smile {
+    position: relative;
+}
+
+.emoji-menu {
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    background-color: #00000078;
+    bottom: 120px;
+    overflow: auto;
+}
+
+.emoji-menu a {
+    text-decoration: none;
+}
+
 /* MESSAGES */
 .message-container {
     display: flex;

@@ -228,6 +228,7 @@ const app = createApp({
                 newMessage: '',
                 searchContact: '',
                 darkMode: false,
+                showEmojiMenu: false,
               }
     },
     computed: {
@@ -363,6 +364,20 @@ const app = createApp({
               userName.classList.remove('text-white');
               contactName.classList.remove('text-white');
             }
+        },
+        
+        toggleEmojiMenu() {
+          this.showEmojiMenu = !this.showEmojiMenu;
+        },
+
+        handleFileSelection(event) {
+          const file = event.target.files[0];
+          
+          console.log(file);
+        },
+
+        openFileInput() {
+          document.getElementById('fileInput').click();
         }
       }
       
